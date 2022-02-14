@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(smach_tutorials)
+project(state_machine)
 
 find_package(catkin REQUIRED COMPONENTS actionlib_msgs)
 
@@ -23,15 +23,17 @@ generate_messages(
 ## LIBRARIES: libraries you create in this project that dependent projects also need
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
+
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES lib
-#  CATKIN_DEPENDS packages
-#  DEPENDS system_lib
+  #  INCLUDE_DIRS include
+  #  LIBRARIES lib
+  #  CATKIN_DEPENDS packages
+  #  DEPENDS system_lib
 )
 
 ## mark examples for installation
-install(DIRECTORY examples
+install(
+  DIRECTORY functionalities
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
   USE_SOURCE_PERMISSIONS
   FILES_MATCHING PATTERN "*.py"
