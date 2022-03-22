@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 from functionalities.header_imports import *
 
 class manipulation(smach.State):

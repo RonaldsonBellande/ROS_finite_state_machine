@@ -48,6 +48,7 @@ class Getter(smach.State):
         rospy.loginfo('>>> GOT DATA! x = '+str(ud.x))
         return 'got_it'
 
+
 def main():
     rospy.init_node('smach_example_state_machine_nesting')
 
