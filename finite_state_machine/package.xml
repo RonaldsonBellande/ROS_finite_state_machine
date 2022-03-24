@@ -1,13 +1,14 @@
-<package>
-  <name>smach_tutorials</name>
+<?xml version="1.0"?>
+<package format="2">
+  <name>finite_state_machine</name>
   <version>0.1.0</version>
-  <description>
-    This package containes numerous examples of how to use SMACH. See the examples directory.
-  </description>
+  <description>This package containes numerous examples of how to use SMACH. See the examples directory </description>
   <author>Ronaldson Bellande</author>
   <maintainer email="ronaldsonbellande@gmail.com">Ronaldson Bellande</maintainer>
   <license>BSD</license>
   <url>http://ros.org/wiki/smach_tutorials</url>
+
+
   <buildtool_depend>catkin</buildtool_depend>
   <run_depend>rospy</run_depend>
   <run_depend>smach</run_depend>

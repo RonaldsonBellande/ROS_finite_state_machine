@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(state_machine)
+project(finite_state_machine)
 
 find_package(catkin REQUIRED COMPONENTS actionlib_msgs)
 
