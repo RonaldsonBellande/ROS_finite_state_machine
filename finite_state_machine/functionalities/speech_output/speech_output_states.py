@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from functionalities.header_imports import *
 
-class speech_display(smach.State):
+class speech_output(smach.State):
     def __init__(self, val):
         smach.State.__init__(self, outcomes = ['set_it'], output_keys = ['x'])
         self._val = val

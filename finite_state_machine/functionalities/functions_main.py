@@ -28,6 +28,9 @@ if __name__ == "__main__":
         smach.StateMachine.add('mimicking', mimicking(), 
                                transitions={'outcome2':'FOO'})
 
+         smach.StateMachine.add('speech_output', mimicking(), 
+                               transitions={'outcome2':'FOO'})
+
 
     state_machine_server = smach_ros.IntrospectionServer('state_machine_server', state_machine, '/SM_ROOT')
     state_machine.start()
