@@ -6,30 +6,39 @@ if __name__ == "__main__":
     state_machine = smach.StateMachine(outcomes=['', ''])
 
 
-    with state_machine:
-        smach.StateMachine.add('computer vision', computer_vision(), 
-                               transitions={'outcome1':'BAR', 
+    with state_machine_detection:
+        smach.StateMachine.add('computer_vision', computer_vision_2d(), 
+                               transitions={'target':'BAR', 
                                             'outcome2':'outcome4'})
 
+        smach.StateMachine.add('computer_vision', computer_vision_2d(), 
+                               transitions={'target':'BAR', 
+                                            'outcome2':'outcome4'})
 
-        smach.StateMachine.add('speech recognition', speech_detection(), 
-                               transitions={'outcome2':'FOO'})
+        smach.StateMachine.add('speech_recognition', speech_detection(), 
+                               transitions={'target':'BAR', 
+                                            'outcome2':'outcome4'})
+
+        smach.StateMachine.add('speech_output', speech_output(), 
+                               transitions={'goal':'BAR', 
+                                            'outcome2':'outcome4'})
 
 
         smach.StateMachine.add('navigation', navigation(), 
-                               transitions={'outcome1':'BAR', 
+                               transitions={'goal':'BAR', 
                                             'outcome2':'outcome4'})
 
-
         smach.StateMachine.add('manipulation', manipulation(), 
-                               transitions={'outcome2':'FOO'})
-
+                                transitions={'goal':'BAR', 
+                                            'outcome2':'outcome4'})
 
         smach.StateMachine.add('mimicking', mimicking(), 
-                               transitions={'outcome2':'FOO'})
+                                transitions={'goal':'BAR', 
+                                            'outcome2':'outcome4'})
 
-         smach.StateMachine.add('speech_output', mimicking(), 
-                               transitions={'outcome2':'FOO'})
+        smach.StateMachine.add('speech_output', mimicking(), 
+                               transitions={'target':'BAR', 
+                                            'outcome2':'outcome4'})
 
 
     state_machine_server = smach_ros.IntrospectionServer('state_machine_server', state_machine, '/SM_ROOT')
