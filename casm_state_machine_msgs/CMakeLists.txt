@@ -3,6 +3,17 @@ project(casm_state_machine_msgs)
 
 find_package(catkin REQUIRED COMPONENTS actionlib_msgs)
 
+
+add_message_files(
+  FILES
+  Casm_State.msg
+  Casm_StateMachine.msg
+)
+
+add_service_files(
+  FILES
+  CasmTransitionHistory.srv
+)
 ## Generate actions in the 'action' folder
 add_action_files(
   FILES
