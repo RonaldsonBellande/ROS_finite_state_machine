@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(casm_pddl_action)
+project(casm_state_machine)
 
 find_package(catkin REQUIRED COMPONENTS actionlib_msgs)
 

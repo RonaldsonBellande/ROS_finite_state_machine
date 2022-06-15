@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(finite_state_machine)
+project(casm_state_machine_msgs)
 
 find_package(catkin REQUIRED COMPONENTS actionlib_msgs)
 
