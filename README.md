@@ -1,3 +1,3 @@
 #### CASM  states machine
 
-A Continous Active State Machine 
+A Continous Active/Adaptive State Machine 
