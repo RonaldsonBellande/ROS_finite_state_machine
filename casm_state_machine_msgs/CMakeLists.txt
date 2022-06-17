@@ -6,7 +6,14 @@ find_package(catkin REQUIRED COMPONENTS actionlib_msgs)
 
 add_message_files(
   FILES
+  Casm_Command.msg
+  Casm_Event.msg
+  Casm_Event_Generator.msg
+  Casm_Event_Update.msg
+  Casm_Object.msg
   Casm_State.msg
+  Casm_State_Behavior.msg
+  Casm_State_Update.msg
   Casm_StateMachine.msg
 )
 

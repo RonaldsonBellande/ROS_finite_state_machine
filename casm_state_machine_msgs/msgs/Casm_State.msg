@@ -5,6 +5,5 @@ int8 level
 casm_msgs/CasmTransition[] transitions
 casm_msgs/CasmOrthogonal[] orthogonals
 casm_msgs/CasmUpdate[] update
-casm_msgs/CasmStateReactor[] state_reactors
+casm_msgs/CasmStateBehavior[] state_behavior
 casm_msgs/CasmEventGenerator[] event_generators
-
