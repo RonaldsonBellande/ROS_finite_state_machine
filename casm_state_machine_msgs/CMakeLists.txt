@@ -15,6 +15,8 @@ add_message_files(
   Casm_State_Behavior.msg
   Casm_State_Update.msg
   Casm_StateMachine.msg
+  Casm_Fruits.msg
+  Casm_Utensils.msg
 )
 
 add_service_files(
